@@ -8,11 +8,27 @@
     "mocha": true
   },
   "rules": {
+    // core eslint rules
     "max-len": [1, 120, 2, {ignoreComments: true}],
     "space-infix-ops": 0,
     "no-unused-vars": [1, {"vars": "local", "args": "none"}],
-    "no-use-before-define": [1, { "functions": true, "classes": true }],
-    "react/prefer-stateless-function": [0, { "ignorePureComponents": <ignorePureComponents> }],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "no-use-before-define": [0, { "functions": "true", "classes": "true" }],
+    "no-multiple-empty-lines": [1, { "max": 5, "maxBOF": 1 }],
+    "comma-dangle": ["error", {
+        "objects": "only-multiline",
+        "imports": "never",
+        "exports": "never",
+        "functions": "ignore",
+    }],
+    "arrow-parens": ["error", "always"],
+    "no-trailing-spaces": [1, { "skipBlankLines": true }],
+
+    // react eslint rules
+    "react/self-closing-comp": [1, {
+    "component": true,
+    "html": true
+    }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": [0]
   }
 }
